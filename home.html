@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motors Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Motors Hub</div>
+    <div class="nav-buttons">
+      <a href="index.html" onclick="Logout()">Logout</a>
+    </div>
+  </header>
+
+  <section class="welcome">
+    <h1>Welcome to Motors Hub</h1>
+    <p>Your one-stop platform for buying and selling vehicles with ease.</p>
+  </section>
+
+  <section class="options">
+    <div class="option-card" onclick="location.href='sell.html'">
+      <h2>Selling</h2>
+      <p>Post your vehicle and get the best deals.</p>
+    </div>
+    <div class="option-card" onclick="location.href='buy.html'">
+      <h2>Buying</h2>
+      <p>Explore listings and find your dream ride.</p>
+    </div>
+  </section>
+
+  <script>
+    function Logout(){
+      localStorage.clear();
+    }
+  </script>
+</body>
+</html>
+

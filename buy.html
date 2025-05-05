@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Vehicles - Motors Hub</title>
+  <style>
+    body {
+      background-color: #2e2e2e;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: #fff;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff6600;
+    }
+    .nav-buttons a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 15px;
+      background-color: #ff6600;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+    .nav-buttons a:hover {
+      background-color: #e05500;
+    }
+    .container {
+      padding: 40px 20px;
+    }
+    .container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .vehicle-listings {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    .vehicle-card {
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .vehicle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+    .vehicle-card h2 {
+      margin-bottom: 10px;
+    }
+    .vehicle-card p {
+      margin: 5px 0;
+    }
+    button {
+      background-color: #e9965e;
+      color: #fff;
+      border: none;
+      margin-top: 10px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e05500;
+    }
+    @media (max-width: 600px) {
+      .vehicle-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Motors Hub</div>
+    <div class="nav-buttons">
+      <a href="home.html">Home</a>
+      <a href="index.html" onclick="Logout()">Logout</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Available Vehicles</h1>
+    <div class="vehicle-listings" id="AvailVehicles">
+      
+    </div>
+  </div>
+
+<script>
+    function Logout(){
+      localStorage.clear();
+    }
+  </script>
+  <script type="module" src="buy.js"></script>
+</body>
+</html>
