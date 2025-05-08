@@ -18,7 +18,6 @@ window.signup = async function signup(event) {
   let email = document.getElementById('semail');
   let password = document.getElementById('spassword');
   let fname = document.getElementById('fname');
-  let i=100;
   
 const querySnapshot = await getDocs(collection(db, "users"));
 let userExists = false;
@@ -40,7 +39,7 @@ if (userExists) {
       FullName: fname.value,
       Password: password.value,
       Email: email.value,
-      U_id: i + 1,
+      U_id: Math.random() * 5,
     });
     toggleForms();
     console.log("Document written with ID: ", docRef.id);
